@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-10-26T02:53:18.211Z</updated>
+    <title>Litenotes</title>
+    <updated>2020-10-26T02:57:10.940Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://litenotes.github.io/images/avatar.png</logo>
     <icon>https://litenotes.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, Litenotes</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://litenotes.github.io/post/hello-gridea/</id>
