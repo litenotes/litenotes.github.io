@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
     <title>Litenotes</title>
-    <updated>2020-10-26T07:06:38.412Z</updated>
+    <updated>2020-10-26T07:43:14.714Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Litenotes</rights>
     <entry>
         <title type="html"><![CDATA[每天进步1%]]></title>
-        <id>https://litenotes.github.io/post/d-VFBPkmc/</id>
-        <link href="https://litenotes.github.io/post/d-VFBPkmc/">
+        <id>https://litenotes.github.io/post/1%progress-everyday/</id>
+        <link href="https://litenotes.github.io/post/1%progress-everyday/">
         </link>
         <updated>2020-10-26T06:44:19.000Z</updated>
     </entry>
