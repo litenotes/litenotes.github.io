@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
     <title>Litenotes</title>
-    <updated>2020-10-26T09:56:02.956Z</updated>
+    <updated>2020-10-26T10:09:47.939Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://litenotes.github.io/images/avatar.png</logo>
     <icon>https://litenotes.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Litenotes</rights>
+    <entry>
+        <title type="html"><![CDATA[青椒云——好用的云电脑]]></title>
+        <id>https://litenotes.github.io/post/103/</id>
+        <link href="https://litenotes.github.io/post/103/">
+        </link>
+        <updated>2020-10-26T10:05:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>如果你现在用的电脑性能不好，如果你想在公用电脑上操作个人资料，如果你想用虚拟机操作某些应用程序…现在云电脑技术已经有一定的技术积累,已经达到了商用的成熟度,你完全可以尝试一下本文推荐的云电脑——<a href="https://www.qingjiaocloud.com/">青椒云</a>，这是一款远程云电脑，你的本地电脑只是一个窗口，所有的运算和操作处理都在云端，可以给你提供非常强劲的配置和十分温和的价格，唯一考验的就是你家的网络速度和延迟了。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>如果你现在用的电脑性能不好，如果你想在公用电脑上操作个人资料，如果你想用虚拟机操作某些应用程序…现在云电脑技术已经有一定的技术积累,已经达到了商用的成熟度,你完全可以尝试一下本文推荐的云电脑——<a href="https://www.qingjiaocloud.com/">青椒云</a>，这是一款远程云电脑，你的本地电脑只是一个窗口，所有的运算和操作处理都在云端，可以给你提供非常强劲的配置和十分温和的价格，唯一考验的就是你家的网络速度和延迟了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[迷你兔——好用的数据恢复软件]]></title>
         <id>https://litenotes.github.io/post/102/</id>
