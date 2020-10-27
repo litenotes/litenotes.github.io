@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
     <title>Litenotes</title>
-    <updated>2020-10-27T09:43:54.250Z</updated>
+    <updated>2020-10-27T10:09:41.896Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://litenotes.github.io/images/avatar.png</logo>
     <icon>https://litenotes.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Litenotes</rights>
+    <entry>
+        <title type="html"><![CDATA[LiteSpeed安装WordPress]]></title>
+        <id>https://litenotes.github.io/post/116/</id>
+        <link href="https://litenotes.github.io/post/116/">
+        </link>
+        <updated>2020-10-27T10:04:48.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Litespeed安装]]></title>
         <id>https://litenotes.github.io/post/115/</id>
@@ -95,17 +102,6 @@
         <summary type="html"><![CDATA[<p>误删文件恢复软件，除了收费还是收费，能用的免费的太少，破解版太多，让人很无语。这里推荐一款简单、易用、适度免费的数据恢复软件<a href="https://www.minitu.cn/pdr-free/">迷你兔</a></p>
 ]]></summary>
         <content type="html"><![CDATA[<p>误删文件恢复软件，除了收费还是收费，能用的免费的太少，破解版太多，让人很无语。这里推荐一款简单、易用、适度免费的数据恢复软件<a href="https://www.minitu.cn/pdr-free/">迷你兔</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[每天进步1%]]></title>
-        <id>https://litenotes.github.io/post/101/</id>
-        <link href="https://litenotes.github.io/post/101/">
-        </link>
-        <updated>2020-10-26T06:44:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>看到一篇文章，每天进步1%，将给你带来巨大改变。这个逻辑，本质上是具体化和温和化某个长期目标。每天进步1%，是一个看起来很轻松的小目标，但是往往就是这些小目标的完成，成就了我们巨大的改变。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>看到一篇文章，每天进步1%，将给你带来巨大改变。这个逻辑，本质上是具体化和温和化某个长期目标。每天进步1%，是一个看起来很轻松的小目标，但是往往就是这些小目标的完成，成就了我们巨大的改变。</p>
 ]]></content>
     </entry>
 </feed>

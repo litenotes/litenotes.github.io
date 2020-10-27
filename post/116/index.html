@@ -9,14 +9,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>Litespeed安装 | Litenotes</title>
+  <title>LiteSpeed安装WordPress | Litenotes</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://litenotes.github.io/media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://litenotes.github.io/media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="Litespeed安装 | Litenotes » Feed" href="https://litenotes.github.io/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="LiteSpeed安装WordPress | Litenotes » Feed" href="https://litenotes.github.io/atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://litenotes.github.io/styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -25,8 +25,8 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-    <meta property="og:description" content="Litespeed安装"/>
-    <meta property="og:url" content="https://litenotes.github.io/post/115/"/>
+    <meta property="og:description" content="LiteSpeed安装WordPress"/>
+    <meta property="og:url" content="https://litenotes.github.io/post/116/"/>
     <meta property="og:locale" content="zh-CN"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Litenotes"/>
@@ -81,10 +81,10 @@
           	<span class="tags">
           	 
         </span>
-            <h1>Litespeed安装</h1>
+            <h1>LiteSpeed安装WordPress</h1>
             <span class="meta">
             	Posted on
-              2020-10-27，3 min read
+              2020-10-27，4 min read
             </span>
           </div>
         </div>
@@ -97,42 +97,74 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>LiteSpeed的安装比OpenLiteSpeed难度大，网上教程太少，官方文档非常晦涩难懂，因为是商业软件，免费版也需要获取序列号，这就会面临一个坎，安装的时候，也会遇到无法运行的情况，这就是第二个坎。</p>
-<!-- more -->
-<h2 id="litespeed序列号">LiteSpeed序列号</h2>
-<p>由于是商业版本，需要正版序列号才能运行，不过，对于小站来说，还是福利，如果你的服务器配置低于要求，是可以免费使用的。<br>
-<img src="https://litenotes.github.io/post-images/1603791423449.PNG" alt="" loading="lazy"><br>
-如果是一个域名、1个worker、低于2G内存，就可以使用Free Starter，但是还是需要订购序列号。点击Buy Now就可以购买：<br>
-<img src="https://litenotes.github.io/post-images/1603791443968.PNG" alt="" loading="lazy"><br>
-点击continue，再点击checkout，填入详细信息（在这里注册邮箱），即可得到序列号，序列号会发送至注册的邮箱，同时还会发送一份简单的安装指南。<br>
-获取序列号是第一个坎，因为一直会卡在真人验证阶段，而且似乎没有任何解决办法。<strong>其实是谷歌的recaptcha无法连接而已</strong>，推荐的解决办法参考我之前的文章：<a href="https://litenotes.github.io/post/111/">谷歌recaptcha无法连接简单解决方案</a></p>
-<h2 id="litespeed的安装">LIteSpeed的安装</h2>
-<h3 id="llstack-一键安装包">LLStack 一键安装包</h3>
-<p>如果想简单就安装使用LiteSpeed，推荐使用LLStack一键安装包，提供完整的教程、各环节均有详细操作说明，推荐使用。</p>
-<blockquote>
-<p>LLStack 全称是 “Linux LiteSpeed Stack”，即在 Linux 上安装 LiteSpeed + PHP +  MySQL/MariaDB（可选）的高性能 Web 运行环境，特别适合运行 PHP 程序。<br>
-LLStack 仅适用于 RHEL 7 系操作系统及其衍生版，RHEL7、CentOS7、OracleLinux7、CloudLinux 7等。 RHEL 8 系正在测试中。<br>
-https://www.llstack.com/</p>
-</blockquote>
-<h3 id="官方安装包">官方安装包</h3>
-<p>因为LiteSpeed已经支持CentOS8，因此我选择手动安装。于是，困难就出现了，官方的安装包安装后，无法进入Web控制面版，提示503错误。通过查询官方文档、论坛等等均无解决办法。获取序列号后按邮件的指导一键代码安装依然无法正常运行。<br>
-<strong>RPM安装</strong><br>
-官方提供RPM安装途径：<a href="https://www.litespeedtech.com/support/wiki/doku.php/litespeed_wiki:installation:rpm">Install LiteSpeed Web Server from RPM</a>，我是通过这种方式安装成功。<br>
-①<strong>添加库</strong><br>
-CentOS 7:<br>
-rpm -ivh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm<br>
-CentOS 8：<br>
-rpms.litespeedtech.com/centos/litespeed-repo-1.2-1.el8.noarch.rpm<br>
-其他版本的库可以到这里查看：http://rpms.litespeedtech.com/centos/<br>
-②<strong>安装LSWS包</strong><br>
-yum install lsws<br>
-这是官方提供的全自动程序，安装成功后，打开主机IP地址的7080端口（防火墙等需要放行），就可以看到Web后台，这个后台运行速度比OpenLiteSpeed更快。</p>
+          <p>LiteSpeed拥有强大的性能，特别适合运行WordPress，配合缓存插件，能带来明显的性能提升（相对于Nginx），详细请参考高性能LiteSpeed介绍和安装，安装OpenLiteSpeed提升WordPress速度，这里就简单说说如何安装WordPress。</p>
+<p>首先是要安装好LiteSpeed，OpenLiteSpeed也可以，性能相对弱一些，但是比Nginx还是碾压优势。然后，需要参考部分文章（别人都写过的，直接拿来用就可以）， 网上在LiteSpeed上安装WordPress的详细文章很少，但是OpenLiteSpeed上安装WordPress的就不少，其实很多操作是通用的，主要参考 《How To Install WordPress with OpenLiteSpeed on CentOS/RHEL 7/8》 。下面是安装步骤。</p>
+<h2 id="一-安装litespeedphp">一、安装LiteSpeed，PHP。</h2>
+<p>参考<a href="https://litenotes.github.io/post/115/">LiteSpeed安装</a></p>
+<h2 id="二-安装mysql">二、安装Mysql</h2>
+<h3 id="1安装mysql并启动">①安装Mysql并启动</h3>
+<p>sudo dnf -y install mysql-server<br>
+sudo systemctl start mysqld<br>
+sudo systemctl enable mysqld</p>
+<h3 id="2数据库安全配置">②数据库安全配置</h3>
+<p>sudo mysql_secure_installation<br>
+直接安装提示操作即可</p>
+<h3 id="3建立woirdpress数据库">③建立WoirdPress数据库</h3>
+<p>sudo mysql -u root -p<br>
+输入刚才配置的密码，即可登陆数据库进行配置</p>
+<p>CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;<br>
+CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'wordpress';<br>
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';<br>
+FLUSH PRIVILEGES;<br>
+exit</p>
+<h2 id="三-安装wordpress">三、安装WordPress</h2>
+<h3 id="1下载wordpress安装包并上传">①下载WordPress安装包并上传</h3>
+<p>上传至服务器某文件夹，例如在根目录新建一个文件夹wp。然后在SSH客户端操作进行解压缩，使用tar xzvf 或者unzip命令。（也可以在本地解压后，在上传至服务器）。</p>
+<p>然后是一些避免出错的操作：本地新建一个.htaccess空白文件，上传至wp文件夹；wp-content文件夹里面新建一个upgrade文件夹；</p>
+<p>最后，使用命令复制wp文件夹的里面的内容到目标文件夹，LiteSpeed有一个默认主机的目录，在/usr/local/lsws/DEFAULT，</p>
+<p>sudo cp -a /wp/.  /usr/local/lsws/DEFAULT/html/wordpress</p>
+<h3 id="2配置wordpress">②配置WordPress</h3>
+<p>首先是修改用户，然后赋予权限：</p>
+<p>sudo chown -R nobody:nobody /usr/local/lsws/Example/html/wordpress</p>
+<p>sudo find /usr/local/lsws/Example/html/wordpress/ -type d -exec chmod 750 {} ;</p>
+<p>sudo find /usr/local/lsws/Example/html/wordpress/ -type f -exec chmod 640 {} ;<br>
+然后是修改配置文件参数：</p>
+<p>curl -s https://api.wordpress.org/secret-key/1.1/salt/<br>
+你会得到一串参数：</p>
+<p>包括define(‘AUTH_KEY’,define(‘SECURE_AUTH_KEY’,等等，找到WordPress根目录的wp-config.php文件，把刚才得到的一串 define (‘AUTH_KEY’ 等内容全部粘贴过去。</p>
+<p>继续修改 wp-config.php文件，把数据库名、用户名、密码等都填上，前面已经配置成wordpress，所以都填wordpress就可以，最后再加一行 define(‘FS_METHOD’, ‘direct’);</p>
+<h2 id="四-配置litespeed">四、配置LiteSpeed</h2>
+<p>打开IP地址7080端口，进入web端<br>
+<img src="https://litenotes.github.io/post-images/1603793306425.PNG" alt="" loading="lazy"></p>
+<h3 id="1配置server">①配置server</h3>
+<p>点击中间的configuration，然后点击External App页面，进入后，修改参数</p>
+<p>Name：修改为你安装的php版本，比如：lsphp74</p>
+<p>Address：修改为uds://tmp/lshttpd/lsphp74.sock</p>
+<p>往下找到 Command ，修改为$SERVER_ROOT/lsphp74/bin/lsphp</p>
+<p>然后点击框的右上角的save保存。</p>
+<h3 id="2配置virtual-hosts">②配置Virtual Hosts</h3>
+<p>上面有4个标签页，依次是Server、Listeners、 Virtual Hosts、Virtual Host Templates，这里我们打开Virtual Hosts，首先是Basic标签页，我们需要打开General标签</p>
+<p>Document Root 修改为： $VH_ROOT/html/wordpress</p>
+<p>Index Files 修改为： index.php, index.html</p>
+<p>找到Rewrite标签：</p>
+<p>Enable Rewrite ：修改为Yes</p>
+<p>Rewrite Rules 添加如下内容，可以避免修改wordpress固定链接格式后无法打开文章的尴尬局面；</p>
+<p>RewriteEngine On<br>
+RewriteBase /<br>
+RewriteCond %{REQUEST_FILENAME} !-f<br>
+RewriteCond %{REQUEST_FILENAME} !-d<br>
+RewriteRule . /index.php [L]<br>
+找到Sceurity标签，删除最低端的SampleProtectedArea；</p>
+<p>找到context标签，删除 /protected/ 这项内容（如果没有请忽略）；</p>
+<h3 id="3重启lsws服务">③重启lsws服务。</h3>
+<figure data-type="image" tabindex="1"><img src="https://litenotes.github.io/post-images/1603793340848.PNG" alt="" loading="lazy"></figure>
+<p>所有操作完成后，就可以点击Graceful Restart，很快就会重启成功，现在就可以愉快地打开IP地址8088端口安装WordPess了。</p>
 
           
           <p class="next-post">下一篇：
-            <a href="https://litenotes.github.io/post/113/">
+            <a href="https://litenotes.github.io/post/115/">
               <span class="post-title">
-                高性能的LiteSpeed&rarr;
+                Litespeed安装&rarr;
               </span>
             </a>
           </p>
