@@ -111,36 +111,48 @@
 Repo（LiteSpeed Repositories）相对简单，需要自己安装php、mysql和相关运行库， 可自由选择相应的版本，同时官方提供一键安装脚本 ols1clk 。我的服务器端运行的是CentOS8，经测试成功安装并顺利运行WordPress。</p>
 <h3 id="首先添加库">首先添加库</h3>
 <p><strong>CentOS 7</strong>:</p>
-<p>rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm</p>
+<pre><code>rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm
+</code></pre>
 <p><strong>CentOS 8</strong>:</p>
-<p>rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el8.noarch.rpm</p>
+<pre><code>rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el8.noarch.rpm
+</code></pre>
 <p>Debian 7, 8 &amp; Ubuntu 12,14,16,18 :</p>
-<p>wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | bash</p>
+<pre><code>wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | bash
+</code></pre>
 <h3 id="然后安装openlitespeed">然后安装OpenLiteSpeed</h3>
 <p><strong>CentOS</strong>:</p>
-<p>yum install openlitespeed</p>
+<pre><code>yum install openlitespeed
+</code></pre>
 <p><strong>Debian &amp; Ubuntu</strong>:</p>
-<p>apt-get install openlitespeed</p>
+<pre><code>apt-get install openlitespeed
+</code></pre>
 <h3 id="安装php可以选择其他版本的php">安装PHP，可以选择其他版本的PHP：</h3>
 <p><strong>CentOS</strong></p>
-<p>yum install epel-release<br>
-yum install lsphp73 lsphp73-common lsphp73-mysql lsphp73-gd lsphp73-process lsphp73-mbstring lsphp73-xml lsphp73-mcrypt lsphp73-pdo lsphp73-imap lsphp73-soap lsphp73-bcmath<br>
-ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5</p>
+<pre><code>yum install epel-release
+yum install lsphp73 lsphp73-common lsphp73-mysql lsphp73-gd lsphp73-process lsphp73-mbstring lsphp73-xml lsphp73-mcrypt lsphp73-pdo lsphp73-imap lsphp73-soap lsphp73-bcmath
+ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5
+</code></pre>
 <p><strong>Debian &amp; Ubuntu</strong>:</p>
-<p>apt-get install lsphp73<br>
-ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5</p>
+<pre><code>apt-get install lsphp73
+ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5
+</code></pre>
 <p>这里，就安装好openlitespeed，当然为了运行wordpress，还需要安装mysql。</p>
 <h2 id="更新openlitespeed">更新Openlitespeed</h2>
 <p>查看官方升级文档后，发现Repo和意见安装脚本安装的是稳定版，不是最新版，而且，不能直接跨版本升级。如果想直接升级，需要Binary Install或者源码安装，但是经过测试，相对简单的Binary安装后提示503错误，可以参考的资料太少，就放弃了。<br>
 启动Openlitespeed</p>
 <p>Openlitespeed默认安装路径是</p>
-<p>/usr/local/lsws</p>
+<pre><code>/usr/local/lsws
+</code></pre>
 <h2 id="启动openlitepeed服务">启动Openlitepeed服务</h2>
-<p>/usr/local/lsws/bin/lswsctrl start</p>
+<pre><code>/usr/local/lsws/bin/lswsctrl start
+</code></pre>
 <p>如果需要停止、重启、重载配置文件，可以使用如下命令：</p>
-<p>/usr/local/lsws/bin/lswsctrl stop</p>
-<p>/usr/local/lsws/bin/lswsctrl restart</p>
-<p>/usr/local/lsws/bin/lswsctrl reload</p>
+<pre><code>/usr/local/lsws/bin/lswsctrl stop 
+
+/usr/local/lsws/bin/lswsctrl restart 
+
+/usr/local/lsws/bin/lswsctrl reload 
+</code></pre>
 <h2 id="后台管理web面板">后台管理：Web面板</h2>
 <p>Openlitespeed提供一个完整功能的Web端控制面板，默认是7080端口，需要在防火墙等开放7080端口才能打开。登陆后就是如下界面：<br>
 <img src="https://litenotes.github.io/post-images/1603796377843.png" alt="" loading="lazy"></p>
