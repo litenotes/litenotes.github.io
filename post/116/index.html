@@ -115,12 +115,13 @@ sudo systemctl enable mysqld
 <h3 id="3建立woirdpress数据库">③建立WoirdPress数据库</h3>
 <pre><code>sudo mysql -u root -p
 </code></pre>
-<p>输入刚才配置的密码，即可登陆数据库进行配置<br>
-CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;<br>
-CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'wordpress';<br>
-GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';<br>
-FLUSH PRIVILEGES;<br>
-exit</p>
+<p>输入刚才配置的密码，即可登陆数据库进行配置</p>
+<pre><code>CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'wordpress';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';
+FLUSH PRIVILEGES;
+exit
+</code></pre>
 <h2 id="三-安装wordpress">三、安装WordPress</h2>
 <h3 id="1下载wordpress安装包并上传">①下载WordPress安装包并上传</h3>
 <p>上传至服务器某文件夹，例如在根目录新建一个文件夹wp。然后在SSH客户端操作进行解压缩，使用tar xzvf 或者unzip命令。（也可以在本地解压后，在上传至服务器）。</p>
