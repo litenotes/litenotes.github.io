@@ -129,13 +129,15 @@ exit
 <p>最后，使用命令复制wp文件夹的里面的内容到目标文件夹，LiteSpeed有一个默认主机的目录，在/usr/local/lsws/DEFAULT，<br>
 sudo cp -a /wp/.  /usr/local/lsws/DEFAULT/html/wordpress</p>
 <h3 id="2配置wordpress">②配置WordPress</h3>
-<p>首先是修改用户，然后赋予权限：<br>
-sudo chown -R nobody:nobody /usr/local/lsws/Example/html/wordpress<br>
-sudo find /usr/local/lsws/Example/html/wordpress/ -type d -exec chmod 750 {} ;<br>
-sudo find /usr/local/lsws/Example/html/wordpress/ -type f -exec chmod 640 {} ;<br>
-然后是修改配置文件参数：<br>
-curl -s https://api.wordpress.org/secret-key/1.1/salt/<br>
-你会得到一串参数：</p>
+<p>首先是修改用户，然后赋予权限：</p>
+<pre><code>sudo chown -R nobody:nobody /usr/local/lsws/Example/html/wordpress
+sudo find /usr/local/lsws/Example/html/wordpress/ -type d -exec chmod 750 {} \;
+sudo find /usr/local/lsws/Example/html/wordpress/ -type f -exec chmod 640 {} \;
+</code></pre>
+<p>然后是修改配置文件参数：</p>
+<pre><code>curl -s https://api.wordpress.org/secret-key/1.1/salt/
+</code></pre>
+<p>你会得到一串参数：</p>
 <p>包括define(‘AUTH_KEY’,define(‘SECURE_AUTH_KEY’,等等，找到WordPress根目录的wp-config.php文件，把刚才得到的一串 define (‘AUTH_KEY’ 等内容全部粘贴过去。</p>
 <p>继续修改 wp-config.php文件，把数据库名、用户名、密码等都填上，前面已经配置成wordpress，所以都填wordpress就可以，最后再加一行 define(‘FS_METHOD’, ‘direct’);</p>
 <h2 id="四-配置litespeed">四、配置LiteSpeed</h2>
@@ -153,13 +155,14 @@ Address：修改为uds://tmp/lshttpd/lsphp74.sock<br>
 Index Files 修改为： index.php, index.html<br>
 找到Rewrite标签：<br>
 Enable Rewrite ：修改为Yes<br>
-Rewrite Rules 添加如下内容，可以避免修改wordpress固定链接格式后无法打开文章的尴尬局面；<br>
-RewriteEngine On<br>
-RewriteBase /<br>
-RewriteCond %{REQUEST_FILENAME} !-f<br>
-RewriteCond %{REQUEST_FILENAME} !-d<br>
-RewriteRule . /index.php [L]<br>
-找到Sceurity标签，删除最低端的SampleProtectedArea；<br>
+Rewrite Rules 添加如下内容，可以避免修改wordpress固定链接格式后无法打开文章的尴尬局面；</p>
+<pre><code>RewriteEngine On
+RewriteBase / 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule . /index.php [L] 
+</code></pre>
+<p>找到Sceurity标签，删除最低端的SampleProtectedArea；<br>
 找到context标签，删除 /protected/ 这项内容（如果没有请忽略）；</p>
 <h3 id="3重启lsws服务">③重启lsws服务。</h3>
 <figure data-type="image" tabindex="1"><img src="https://litenotes.github.io/post-images/1603793340848.PNG" alt="" loading="lazy"></figure>
