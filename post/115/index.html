@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
   <head>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,14 +9,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>Litenotes</title>
+  <title>Litespeed安装 | Litenotes</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://litenotes.github.io/media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://litenotes.github.io/media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="Litenotes » Feed" href="https://litenotes.github.io/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Litespeed安装 | Litenotes » Feed" href="https://litenotes.github.io/atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://litenotes.github.io/styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -25,9 +25,15 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
+    <meta property="og:description" content="Litespeed安装"/>
+    <meta property="og:url" content="https://litenotes.github.io/post/115/"/>
+    <meta property="og:locale" content="zh-CN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Litenotes"/>
   </head>
   <body>
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  	<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="https://litenotes.github.io">Litenotes</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,73 +71,79 @@
       </div>
     </div>
   </nav>
+  <!-- Page Header -->
   <header class="masthead" style="background-image: url('https://litenotes.github.io/media/images/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Litenotes</h1>
-            <span class="subheading">温故而知新</span>
+          <div class="post-heading">
+          	<span class="tags">
+          	 
+        </span>
+            <h1>Litespeed安装</h1>
+            <span class="meta">
+            	Posted on
+              2020-10-27，3 min read
+            </span>
           </div>
         </div>
       </div>
     </div>
   </header>
-      <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-       
-        <div class="post-preview">
-          <a href="https://litenotes.github.io/post/github-pages-blog/">
-            <h2 class="post-title">
-              github pages自建博客
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-10-26</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://litenotes.github.io/post/hello-gridea/">
-            <h2 class="post-title">
-              Hello Gridea
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-            </h3>
-          <p class="post-meta">
-             <span class="time">2018-12-12</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>LiteSpeed的安装比OpenLiteSpeed难度大，网上教程太少，官方文档非常晦涩难懂，因为是商业软件，免费版也需要获取序列号，这就会面临一个坎，安装的时候，也会遇到无法运行的情况，这就是第二个坎。</p>
+<!-- more -->
+<h2 id="litespeed序列号">LiteSpeed序列号</h2>
+<p>由于是商业版本，需要正版序列号才能运行，不过，对于小站来说，还是福利，如果你的服务器配置低于要求，是可以免费使用的。<br>
+<img src="https://litenotes.github.io/post-images/1603791423449.PNG" alt="" loading="lazy"><br>
+如果是一个域名、1个worker、低于2G内存，就可以使用Free Starter，但是还是需要订购序列号。点击Buy Now就可以购买：<br>
+<img src="https://litenotes.github.io/post-images/1603791443968.PNG" alt="" loading="lazy"><br>
+点击continue，再点击checkout，填入详细信息（在这里注册邮箱），即可得到序列号，序列号会发送至注册的邮箱，同时还会发送一份简单的安装指南。<br>
+获取序列号是第一个坎，因为一直会卡在真人验证阶段，而且似乎没有任何解决办法。<strong>其实是谷歌的recaptcha无法连接而已</strong>，推荐的解决办法参考我之前的文章：<a href="https://litenotes.github.io/post/111/">谷歌recaptcha无法连接简单解决方案</a></p>
+<h2 id="litespeed的安装">LIteSpeed的安装</h2>
+<h3 id="llstack-一键安装包">LLStack 一键安装包</h3>
+<p>如果想简单就安装使用LiteSpeed，推荐使用LLStack一键安装包，提供完整的教程、各环节均有详细操作说明，可以说是完美的解决方案，美中不足就是有一段时间没有更新了，发文时，仅支持CentOS7。</p>
+<blockquote>
+<p>LLStack 全称是 “Linux LiteSpeed Stack”，即在 Linux 上安装 LiteSpeed + PHP +  MySQL/MariaDB（可选）的高性能 Web 运行环境，特别适合运行 PHP 程序。<br>
+LLStack 仅适用于 RHEL 7 系操作系统及其衍生版，RHEL7、CentOS7、OracleLinux7、CloudLinux 7等。 RHEL 8 系正在测试中。<br>
+https://www.llstack.com/</p>
+</blockquote>
+<h3 id="官方安装包">官方安装包</h3>
+<p>因为LiteSpeed已经支持CentOS8，因此我选择手动安装。于是，困难就出现了，官方的安装包安装后，无法进入Web控制面版，提示503错误。通过查询官方文档、论坛等等均无解决办法。获取序列号后按邮件的指导一键代码安装依然无法正常运行。<br>
+<strong>RPM安装</strong><br>
+官方提供RPM安装途径：<a href="https://www.litespeedtech.com/support/wiki/doku.php/litespeed_wiki:installation:rpm">Install LiteSpeed Web Server from RPM</a>，我是通过这种方式安装成功。<br>
+①<strong>添加库</strong><br>
+CentOS 7:<br>
+rpm -ivh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm<br>
+CentOS 8：<br>
+rpms.litespeedtech.com/centos/litespeed-repo-1.2-1.el8.noarch.rpm<br>
+其他版本的库可以到这里查看：http://rpms.litespeedtech.com/centos/<br>
+②<strong>安装LSWS包</strong><br>
+yum install lsws<br>
+这是官方提供的全自动程序，安装成功后，打开主机IP地址的7080端口（防火墙等需要放行），就可以看到Web后台，这个后台运行速度比OpenLiteSpeed更快。</p>
+
+          
+          <p class="next-post">下一篇：
+            <a href="https://litenotes.github.io/post/113/">
+              <span class="post-title">
+                高性能的LiteSpeed&rarr;
+              </span>
+            </a>
+          </p>
+        
+        <div class="comment">
+          
         </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        
-        <a class="btn btn-primary float-left" href="https://litenotes.github.io/">&larr; 上一页</a>
-        
-        
       </div>
     </div>
-  </div>
-
-  
-    <!-- Footer -->
+  </article>
+ <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
@@ -202,3 +214,4 @@
   })(this));</script>
   </body>
 </html>
+
