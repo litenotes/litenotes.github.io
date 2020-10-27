@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
     <title>Litenotes</title>
-    <updated>2020-10-27T10:11:37.821Z</updated>
+    <updated>2020-10-27T11:02:35.814Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://litenotes.github.io/images/avatar.png</logo>
     <icon>https://litenotes.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Litenotes</rights>
+    <entry>
+        <title type="html"><![CDATA[安装OpenLiteSpeed提升WordPress速度]]></title>
+        <id>https://litenotes.github.io/post/117/</id>
+        <link href="https://litenotes.github.io/post/117/">
+        </link>
+        <updated>2020-10-27T10:50:57.000Z</updated>
+        <summary type="html"><![CDATA[<p><a href="https://openlitespeed.org/">Openlitespeed（OLS）</a>是<a href="https://www.litespeedtech.com">LiteSpeed</a>的开源项目，具有非常快的响应速度和强大的缓存性能，用来运行WordPress是很好的选择。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://openlitespeed.org/">Openlitespeed（OLS）</a>是<a href="https://www.litespeedtech.com">LiteSpeed</a>的开源项目，具有非常快的响应速度和强大的缓存性能，用来运行WordPress是很好的选择。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[LiteSpeed安装WordPress]]></title>
         <id>https://litenotes.github.io/post/116/</id>
@@ -95,17 +106,6 @@
         <summary type="html"><![CDATA[<p>如果你现在用的电脑性能不好，如果你想在公用电脑上操作个人资料，如果你想用虚拟机操作某些应用程序…现在云电脑技术已经有一定的技术积累,已经达到了商用的成熟度,你完全可以尝试一下本文推荐的云电脑——<a href="https://www.qingjiaocloud.com/">青椒云</a>。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>如果你现在用的电脑性能不好，如果你想在公用电脑上操作个人资料，如果你想用虚拟机操作某些应用程序…现在云电脑技术已经有一定的技术积累,已经达到了商用的成熟度,你完全可以尝试一下本文推荐的云电脑——<a href="https://www.qingjiaocloud.com/">青椒云</a>。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[迷你兔——好用的数据恢复软件]]></title>
-        <id>https://litenotes.github.io/post/102/</id>
-        <link href="https://litenotes.github.io/post/102/">
-        </link>
-        <updated>2020-10-26T08:14:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>误删文件恢复软件，除了收费还是收费，能用的免费的太少，破解版太多，让人很无语。这里推荐一款简单、易用、适度免费的数据恢复软件<a href="https://www.minitu.cn/pdr-free/">迷你兔</a></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>误删文件恢复软件，除了收费还是收费，能用的免费的太少，破解版太多，让人很无语。这里推荐一款简单、易用、适度免费的数据恢复软件<a href="https://www.minitu.cn/pdr-free/">迷你兔</a></p>
 ]]></content>
     </entry>
 </feed>

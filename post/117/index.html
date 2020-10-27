@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>安装OpenLiteSpeed提升WordPress速度 | Litenotes</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://litenotes.github.io/media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://litenotes.github.io/media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="安装OpenLiteSpeed提升WordPress速度 | Litenotes » Feed" href="https://litenotes.github.io/atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://litenotes.github.io/styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://litenotes.github.io/media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+    <meta property="og:description" content="安装OpenLiteSpeed提升WordPress速度"/>
+    <meta property="og:url" content="https://litenotes.github.io/post/117/"/>
+    <meta property="og:locale" content="zh-CN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Litenotes"/>
+  </head>
+  <body>
+  	<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://litenotes.github.io">Litenotes</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/">首页</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/post">归档</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/tags">标签</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/post/about">关于</a>
+              
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://litenotes.github.io/media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+          	<span class="tags">
+          	 
+        </span>
+            <h1>安装OpenLiteSpeed提升WordPress速度</h1>
+            <span class="meta">
+            	Posted on
+              2020-10-27，4 min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p><a href="https://openlitespeed.org/">Openlitespeed（OLS）</a>是<a href="https://www.litespeedtech.com">LiteSpeed</a>的开源项目，具有非常快的响应速度和强大的缓存性能，用来运行WordPress是很好的选择。</p>
+<!-- more -->
+<h2 id="openlitespeed性能">Openlitespeed性能</h2>
+<p>一开始我是使用Nginx来运行Woredpress的，虽然理论上比Apache快很多，但是总体来说，还是很慢，互联网上一大堆提升WordPress速度的文章，也说明大家都想提升速度，但是nginx性能就在那里，只能另辟蹊径，看看官网的Benchmarks：<br>
+<img src="https://litenotes.github.io/post-images/1603796044839.png" alt="" loading="lazy"><br>
+如果是Jommla，那就更厉害，几乎是压倒性的优势（<a href="https://openlitespeed.org/benchmarks/jml/">原文链接</a>)<br>
+<img src="https://litenotes.github.io/post-images/1603796152117.PNG" alt="" loading="lazy"><br>
+使用ModSecurity（WAF）防火墙后，Nginx和Apache几乎崩溃，但是OLS依然很快（<a href="https://openlitespeed.org/benchmarks/modsecurity/">原文链接</a>)，OLS在ModSecurity的响应速度是Nginx的90倍，Apache的94倍。</p>
+<h2 id="如何安装openlitespeed">如何安装Openlitespeed</h2>
+<p>WordPress插件库有一个litespeed插件，安装后无法启动全部功能，需要服务器端安装相应的软件，于是就试着安装openlitespeed。官网有四种安装方式：<br>
+<img src="https://litenotes.github.io/post-images/1603796216657.PNG" alt="" loading="lazy"><br>
+Repo（LiteSpeed Repositories）相对简单，需要自己安装php、mysql和相关运行库， 可自由选择相应的版本，同时官方提供一键安装脚本 ols1clk 。我的服务器端运行的是CentOS8，经测试成功安装并顺利运行WordPress。</p>
+<h3 id="首先添加库">首先添加库</h3>
+<p><strong>CentOS 7</strong>:</p>
+<p>rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm</p>
+<p><strong>CentOS 8</strong>:</p>
+<p>rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el8.noarch.rpm</p>
+<p>Debian 7, 8 &amp; Ubuntu 12,14,16,18 :</p>
+<p>wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | bash</p>
+<h3 id="然后安装openlitespeed">然后安装OpenLiteSpeed</h3>
+<p><strong>CentOS</strong>:</p>
+<p>yum install openlitespeed</p>
+<p><strong>Debian &amp; Ubuntu</strong>:</p>
+<p>apt-get install openlitespeed</p>
+<h3 id="安装php可以选择其他版本的php">安装PHP，可以选择其他版本的PHP：</h3>
+<p><strong>CentOS</strong></p>
+<p>yum install epel-release<br>
+yum install lsphp73 lsphp73-common lsphp73-mysql lsphp73-gd lsphp73-process lsphp73-mbstring lsphp73-xml lsphp73-mcrypt lsphp73-pdo lsphp73-imap lsphp73-soap lsphp73-bcmath<br>
+ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5</p>
+<p><strong>Debian &amp; Ubuntu</strong>:</p>
+<p>apt-get install lsphp73<br>
+ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5</p>
+<p>这里，就安装好openlitespeed，当然为了运行wordpress，还需要安装mysql。</p>
+<h2 id="更新openlitespeed">更新Openlitespeed</h2>
+<p>查看官方升级文档后，发现Repo和意见安装脚本安装的是稳定版，不是最新版，而且，不能直接跨版本升级。如果想直接升级，需要Binary Install或者源码安装，但是经过测试，相对简单的Binary安装后提示503错误，可以参考的资料太少，就放弃了。<br>
+启动Openlitespeed</p>
+<p>Openlitespeed默认安装路径是</p>
+<p>/usr/local/lsws</p>
+<h2 id="启动openlitepeed服务">启动Openlitepeed服务</h2>
+<p>/usr/local/lsws/bin/lswsctrl start</p>
+<p>如果需要停止、重启、重载配置文件，可以使用如下命令：</p>
+<p>/usr/local/lsws/bin/lswsctrl stop</p>
+<p>/usr/local/lsws/bin/lswsctrl restart</p>
+<p>/usr/local/lsws/bin/lswsctrl reload</p>
+<h2 id="后台管理web面板">后台管理：Web面板</h2>
+<p>Openlitespeed提供一个完整功能的Web端控制面板，默认是7080端口，需要在防火墙等开放7080端口才能打开。登陆后就是如下界面：<br>
+<img src="https://litenotes.github.io/post-images/1603796377843.png" alt="" loading="lazy"></p>
+<p>参考文章</p>
+<p>网上Openlitespeed的文章不多，我也是参考了很多官方文档和外文文章，不断摸索，才成功安装好，本文很多细节都没有提，因为别人已经写得很清楚了，有问题请参考下面的文章吧。当然，还有性能更好、功能更全、体验更好的的商业版Litespeed可以使用，详细请看高性能LiteSpeed介绍和安装。</p>
+<p>1.<a href="https://openlitespeed.org/kb/">官方文档</a>，这是最权威的内容，但是经过实际操作，官方文档忽略很多细节，往往还是存在很多问题。</p>
+<p>2.<a href="https://0xzx.com/202001062118442843.html/amp">《如何在CentOS 8上使用PHP 7.4安装和配置OpenLiteSpeed》</a> ，这是很详细的openlitespeed安装步骤，很多细节和图例。</p>
+<p>3.<a href="https://www.techsupportpk.com/2019/12/how-to-install-wordpress-with-openlitespeed-centos-8-rhel-8.html">《How To Install WordPress with OpenLiteSpeed on CentOS/RHEL 7/8》</a> 如果要安装WordPress，这篇文章必读。</p>
+
+          
+          <p class="next-post">下一篇：
+            <a href="https://litenotes.github.io/post/116/">
+              <span class="post-title">
+                LiteSpeed安装WordPress&rarr;
+              </span>
+            </a>
+          </p>
+        
+        <div class="comment">
+          
+        </div>
+      </div>
+    </div>
+  </article>
+ <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <li class="list-inline-item">
+              <a href="https://litenotes.github.io/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>Litenotes</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://litenotes.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://litenotes.github.io/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  </body>
+</html>
+
