@@ -1,288 +1,331 @@
 <html>
+
 <head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-<title>Litenotes</title>
-
-<link rel="shortcut icon" href="https://litenotes.github.io/favicon.ico?v=1603760051198">
-
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Litenotes
+</title>
+<link rel="shortcut icon" href="https://litenotes.github.io/favicon.ico?v=1603761119430">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://litenotes.github.io/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://litenotes.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
 </head>
+
 <body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            Litenotes
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://litenotes.github.io">
+                <img class="avatar" src="https://litenotes.github.io/images/avatar.png?v=1603761119430" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    Litenotes
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
         </div>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/106/">
+                        浏览器的存在感越来越弱
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-10-26</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>就浏览器来说，电脑端和手机端均存在弱化的趋势。首先，桌面电脑相较于手机已经出现严重的下滑，手机端的使用已经逐渐成为主流。然后，手机端，随着各大主流的APP逐渐蚕食用户时间，真正需要使用浏览器的情况也变得越来越少。</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/106/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/105/">
+                        读书是更好的碎片阅读
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-10-26</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            碎片文章观点无内在逻辑
+我们在头条、微博、微信公众号看了太多文章，这些文章之间无逻辑关联；现在也有很成熟的算法，会根据你的喜好推荐相关文章，但是算法不知道文章这些文章的内在逻辑。也就是说，这些碎片文章的核心观点很可能是完全相反的。
+互联网文章可能存在的问题
+我们在浏览头条的时候，总会有一种意犹未尽但是又说不出为什么的感觉，往往给我们一种这样的感觉：文章说得有道理，但是总觉得缺了什么。这些文章由于字数限制，内容只能缩减，要不就是太笼统，要不就是太片面。而且，发表文章的门槛比出书低太多，很多文章作者也没有经过严格写作训练，文章写得烂；没有扎实的学科基础，论述肤浅，甚至东拼西凑就是一篇文章。阅读互联网文章，在获取信息的时候，还要多甄别，但是很多读者并不具备甄别能力，往往看完一篇文章后，原来如此，过一段时间，就忘掉了。如此循环。
+书是汇集同一核心观点的一系列文章
+书，这里主要指论述类的书籍，作者都会有一个逻辑框架，在这个框架里，作者会把所有相关的内容都融汇进去。在书籍的核心逻辑下，无关的论点要不就是剔除，要不就是作者抨击的对象，所以读完一本书，你会对整个观念有非常深刻的认识。
+把读书当做碎片化阅读
+当下，电子书库很强大，书的获取途径非常容易，成本也很低，但是我们似乎找不到时间来读书了。不过，换种思路，把书籍的文章也作为碎片化的文章来阅读，或许会取得意想不到的效果。 例如，我们需要了解睡眠相关的信息，除了在头条，知乎上面搜索相关的文章外，还可以在微信读书，网易蜗牛读书上面搜索相关的书籍，任何一本书里的文章信息量都是远超一篇篇独立的文章。锁定书籍后，把书籍的文章作为一篇篇碎片文章来阅读，不要做长短期规划，什么时候把书籍读完，把读互联网文章的时间拿来读书上的内容，虽然读书的时间会长很多，但是当你读完一本书后，作者的主要观点一定会有深刻印象的，这是读互联网文章不可能达到的。
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/105/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/103/">
+                        青椒云——好用的云电脑
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-10-26</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>如果你现在用的电脑性能不好，如果你想在公用电脑上操作个人资料，如果你想用虚拟机操作某些应用程序…现在云电脑技术已经有一定的技术积累,已经达到了商用的成熟度,你完全可以尝试一下本文推荐的云电脑——<a href="https://www.qingjiaocloud.com/">青椒云</a>，这是一款远程云电脑，你的本地电脑只是一个窗口，所有的运算和操作处理都在云端，可以给你提供非常强劲的配置和十分温和的价格，唯一考验的就是你家的网络速度和延迟了。</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/103/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/102/">
+                        迷你兔——好用的数据恢复软件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-10-26</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>误删文件恢复软件，除了收费还是收费，能用的免费的太少，破解版太多，让人很无语。这里推荐一款简单、易用、适度免费的数据恢复软件<a href="https://www.minitu.cn/pdr-free/">迷你兔</a></p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/102/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/101/">
+                        每天进步1%
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-10-26</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>看到一篇文章，每天进步1%，将给你带来巨大改变。这个逻辑，本质上是具体化和温和化某个长期目标。每天进步1%，是一个看起来很轻松的小目标，但是往往就是这些小目标的完成，成就了我们巨大的改变。</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/101/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1603760051198" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
-
-
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://litenotes.github.io/post/106/">
-                            <span class="post-title gt-c-content-color-first">浏览器的存在感越来越弱</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>就浏览器来说，电脑端和手机端均存在弱化的趋势。首先，桌面电脑相较于手机已经出现严重的下滑，手机端的使用已经逐渐成为主流。然后，手机端，随着各大主流的APP逐渐蚕食用户时间，真正需要使用浏览器的情况也变得越来越少。</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-10-26 ·
-                        </time>
-                        
-                    </div>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/github-pages-blog/">
+                        github pages自建博客
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-10-26</time>
+                    
                 </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://litenotes.github.io/post/105/">
-                            <span class="post-title gt-c-content-color-first">读书是更好的碎片阅读</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-10-26 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://litenotes.github.io/post/103/">
-                            <span class="post-title gt-c-content-color-first">青椒云——好用的云电脑</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>如果你现在用的电脑性能不好，如果你想在公用电脑上操作个人资料，如果你想用虚拟机操作某些应用程序…现在云电脑技术已经有一定的技术积累,已经达到了商用的成熟度,你完全可以尝试一下本文推荐的云电脑——<a href="https://www.qingjiaocloud.com/">青椒云</a>，这是一款远程云电脑，你的本地电脑只是一个窗口，所有的运算和操作处理都在云端，可以给你提供非常强劲的配置和十分温和的价格，唯一考验的就是你家的网络速度和延迟了。</p>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            试过很多途径，github pages自建博客网站应该是最省心、省脑、省钱的方案。唯一不足，应该就是国内访问可能会变慢吧。
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-10-26 ·
-                        </time>
-                        
-                    </div>
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/github-pages-blog/">Read More ~</a>
+                            </div>
                 </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://litenotes.github.io/post/hello-gridea/">
+                        Hello Gridea
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-12-12</time>
+                    
+                        <a href="https://litenotes.github.io/tag/XUYt1XEgU/" class="post-tag i-tag
+                            i-tag-other_1">
+            #Gridea
+        </a>
                         
-                        <a href="https://litenotes.github.io/post/102/">
-                            <span class="post-title gt-c-content-color-first">迷你兔——好用的数据恢复软件</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>误删文件恢复软件，除了收费还是收费，能用的免费的太少，破解版太多，让人很无语。这里推荐一款简单、易用、适度免费的数据恢复软件<a href="https://www.minitu.cn/pdr-free/">迷你兔</a></p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-10-26 ·
-                        </time>
-                        
-                    </div>
                 </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://litenotes.github.io/post/101/">
-                            <span class="post-title gt-c-content-color-first">每天进步1%</span>
+                <div class="post-article">
+                    
+                        <a href="https://litenotes.github.io/post/hello-gridea/" class="post-feature-image" style="background-image:url(https://litenotes.github.io/post-images/hello-gridea.png) ">
                         </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>看到一篇文章，每天进步1%，将给你带来巨大改变。这个逻辑，本质上是具体化和温和化某个长期目标。每天进步1%，是一个看起来很轻松的小目标，但是往往就是这些小目标的完成，成就了我们巨大的改变。</p>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-10-26 ·
-                        </time>
                         
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://litenotes.github.io/post/github-pages-blog/">
-                            <span class="post-title gt-c-content-color-first">github pages自建博客</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-10-26 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://litenotes.github.io/post/hello-gridea/">
-                            <span class="post-title gt-c-content-color-first">Hello Gridea</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2018-12-12 ·
-                        </time>
-                        
-                            <a href="https://litenotes.github.io/tag/XUYt1XEgU/" class="post-tag">
-                                # Gridea
-                            </a>
-                        
-                    </div>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://litenotes.github.io/post/hello-gridea/">Read More ~</a>
+                            </div>
                 </div>
+            </article>
+            
+                <!-- 翻页 -->
                 
-                    <a href="https://litenotes.github.io/post/hello-gridea/" class="post-feature-image"
-                       style="background-image: url('https://litenotes.github.io/post-images/hello-gridea.png')">
-                    </a>
-                
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://litenotes.github.io/images/avatar.png?v=1603761119430)">
+        </div>
+        <h1 class="id_card-title">
+            Litenotes
+        </h1>
+        <h2 class="id_card-description">
+            温故而知新
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
             </div>
-        
-    </div>
-</div>
-
-        <div class="pagination-container">
-    
-    
-</div>
 
 
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">温故而知新</div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    <div class="footer-info">
-        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://litenotes.github.io/atom.xml" target="_blank">RSS</a></a>
-    </div>
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://litenotes.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
@@ -290,6 +333,12 @@
 </script>
 
     </div>
-</div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
 </body>
+
 </html>
