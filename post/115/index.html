@@ -119,11 +119,13 @@ https://www.llstack.com/</p>
 <strong>RPM安装</strong><br>
 官方提供RPM安装途径：<a href="https://www.litespeedtech.com/support/wiki/doku.php/litespeed_wiki:installation:rpm">Install LiteSpeed Web Server from RPM</a>，我是通过这种方式安装成功。<br>
 ①<strong>添加库</strong><br>
-CentOS 7:<br>
-rpm -ivh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm<br>
-CentOS 8：<br>
-rpms.litespeedtech.com/centos/litespeed-repo-1.2-1.el8.noarch.rpm<br>
-其他版本的库可以到这里查看：http://rpms.litespeedtech.com/centos/<br>
+CentOS 7:</p>
+<pre><code>rpm -ivh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpm
+</code></pre>
+<p>CentOS 8：</p>
+<pre><code>rpms.litespeedtech.com/centos/litespeed-repo-1.2-1.el8.noarch.rpm
+</code></pre>
+<p>其他版本的库可以到这里查看：http://rpms.litespeedtech.com/centos/<br>
 ②<strong>安装LSWS包</strong><br>
 yum install lsws<br>
 这是官方提供的全自动程序，安装成功后，打开主机IP地址的7080端口（防火墙等需要放行），就可以看到Web后台，这个后台运行速度比OpenLiteSpeed更快。</p>
