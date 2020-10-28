@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
     <title>Litenotes</title>
-    <updated>2020-10-28T01:20:23.088Z</updated>
+    <updated>2020-10-28T02:10:09.559Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
@@ -11,9 +11,20 @@
     <icon>https://litenotes.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Litenotes</rights>
     <entry>
+        <title type="html"><![CDATA[Litespeed系列文章]]></title>
+        <id>https://litenotes.github.io/post/119/</id>
+        <link href="https://litenotes.github.io/post/119/">
+        </link>
+        <updated>2020-10-28T01:37:54.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="https://litenotes.github.io/post-images/1603849564610.jpg" alt="" loading="lazy">Litespeed真是个好东西。小站免费，碾压的性能，高级的面板，近乎全套的安全配置，十分简单的安装和升级，在我看来，就是近乎完美服务器平台。我也是在nginx平台上安装过Wordpress，体验过性能提升的无助，服务器提供商不断的漏洞提醒，然后，我通过查找资料教程，把nginx换成litespeed后，性能和安全都有了质的提升，下面就是我在学习、实践litespeed的一系列文章。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://litenotes.github.io/post-images/1603849564610.jpg" alt="" loading="lazy">Litespeed真是个好东西。小站免费，碾压的性能，高级的面板，近乎全套的安全配置，十分简单的安装和升级，在我看来，就是近乎完美服务器平台。我也是在nginx平台上安装过Wordpress，体验过性能提升的无助，服务器提供商不断的漏洞提醒，然后，我通过查找资料教程，把nginx换成litespeed后，性能和安全都有了质的提升，下面就是我在学习、实践litespeed的一系列文章。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[LiteSpeed如何更新？]]></title>
-        <id>https://litenotes.github.io/post/108/</id>
-        <link href="https://litenotes.github.io/post/108/">
+        <id>https://litenotes.github.io/post/118/</id>
+        <link href="https://litenotes.github.io/post/118/">
         </link>
         <updated>2020-10-27T12:11:27.000Z</updated>
         <summary type="html"><![CDATA[<p>LiteSpeed有两种很简单的方法更新：<strong>WebAdmin后台更新和SSH命令更新</strong>。</p>
@@ -100,12 +111,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>就浏览器来说，电脑端和手机端均存在弱化的趋势。首先，桌面电脑相较于手机已经出现严重的下滑，手机端的使用已经逐渐成为主流。然后，手机端，随着各大主流的APP逐渐蚕食用户时间，真正需要使用浏览器的情况也变得越来越少。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[读书是更好的碎片阅读]]></title>
-        <id>https://litenotes.github.io/post/105/</id>
-        <link href="https://litenotes.github.io/post/105/">
-        </link>
-        <updated>2020-10-26T10:10:46.000Z</updated>
     </entry>
 </feed>
