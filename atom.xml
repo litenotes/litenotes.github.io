@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litenotes.github.io</id>
     <title>Litenotes</title>
-    <updated>2020-10-28T02:10:09.559Z</updated>
+    <updated>2020-10-28T08:02:51.711Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://litenotes.github.io"/>
     <link rel="self" href="https://litenotes.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://litenotes.github.io/images/avatar.png</logo>
     <icon>https://litenotes.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Litenotes</rights>
+    <entry>
+        <title type="html"><![CDATA[博客搬到Github Pages，记录安装使用Wordpress历程]]></title>
+        <id>https://litenotes.github.io/post/121/</id>
+        <link href="https://litenotes.github.io/post/121/">
+        </link>
+        <updated>2020-10-28T06:36:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>2019年底捣腾Wordpress，每天搞得晕头晕脑，然后也发了几篇博客，记录自己是如何安装WordPress，如何提升性能，如何提升安全性等内容，然后就没有什么东西可写了。这两天把博客搬到Github Pages，对自己去年折腾云空间安装使用WordPress也有了新的感悟，记录如下。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>2019年底捣腾Wordpress，每天搞得晕头晕脑，然后也发了几篇博客，记录自己是如何安装WordPress，如何提升性能，如何提升安全性等内容，然后就没有什么东西可写了。这两天把博客搬到Github Pages，对自己去年折腾云空间安装使用WordPress也有了新的感悟，记录如下。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Litespeed系列文章]]></title>
         <id>https://litenotes.github.io/post/119/</id>
@@ -99,17 +110,6 @@
         <summary type="html"><![CDATA[<p>Windows平台想要使用安卓的应用，最好的方式还是安卓模拟器，但是当我体验过几款国产的模拟器后，总觉得还是差点意思，要不就不兼容，要不就速度慢，而且广告多，系统版本低，很失望。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>Windows平台想要使用安卓的应用，最好的方式还是安卓模拟器，但是当我体验过几款国产的模拟器后，总觉得还是差点意思，要不就不兼容，要不就速度慢，而且广告多，系统版本低，很失望。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[浏览器的存在感越来越弱]]></title>
-        <id>https://litenotes.github.io/post/106/</id>
-        <link href="https://litenotes.github.io/post/106/">
-        </link>
-        <updated>2020-10-26T10:21:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>就浏览器来说，电脑端和手机端均存在弱化的趋势。首先，桌面电脑相较于手机已经出现严重的下滑，手机端的使用已经逐渐成为主流。然后，手机端，随着各大主流的APP逐渐蚕食用户时间，真正需要使用浏览器的情况也变得越来越少。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>就浏览器来说，电脑端和手机端均存在弱化的趋势。首先，桌面电脑相较于手机已经出现严重的下滑，手机端的使用已经逐渐成为主流。然后，手机端，随着各大主流的APP逐渐蚕食用户时间，真正需要使用浏览器的情况也变得越来越少。</p>
 ]]></content>
     </entry>
 </feed>
