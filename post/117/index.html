@@ -105,13 +105,12 @@
 <!-- more -->
 <h2 id="openlitespeed性能">Openlitespeed性能</h2>
 <p>一开始我是使用Nginx来运行Woredpress的，虽然理论上比Apache快很多，但是总体来说，还是很慢，互联网上一大堆提升WordPress速度的文章，也说明大家都想提升速度，但是nginx性能就在那里，只能另辟蹊径，看看官网的Benchmarks：<br>
-<img src="https://litenotes.github.io/post-images/1603796044839.png" alt="" loading="lazy"><br>
-如果是Jommla，那就更厉害，几乎是压倒性的优势（<a href="https://openlitespeed.org/benchmarks/jml/">原文链接</a>)<br>
-<img src="https://litenotes.github.io/post-images/1603796152117.PNG" alt="" loading="lazy"><br>
-使用ModSecurity（WAF）防火墙后，Nginx和Apache几乎崩溃，但是OLS依然很快（<a href="https://openlitespeed.org/benchmarks/modsecurity/">原文链接</a>)，OLS在ModSecurity的响应速度是Nginx的90倍，Apache的94倍。</p>
+<img src="https://litenotes.github.io/post-images/1604069831311.png" alt="" loading="lazy"></p>
+<p>如果是Jommla，那就更厉害，几乎是压倒性的优势（<a href="https://litenotes.github.io/post-images/1604069867966.PNG">原文链接</a></p>
+<p>使用ModSecurity（WAF）防火墙后，Nginx和Apache几乎崩溃，但是OLS依然很快（<a href="https://litenotes.github.io/post-images/1604069912638.PNG">原文链接</a></p>
 <h2 id="如何安装openlitespeed">如何安装Openlitespeed</h2>
 <p>WordPress插件库有一个litespeed插件，安装后无法启动全部功能，需要服务器端安装相应的软件，于是就试着安装openlitespeed。官网有四种安装方式：<br>
-<img src="https://litenotes.github.io/post-images/1603796216657.PNG" alt="" loading="lazy"><br>
+<img src="https://litenotes.github.io/post-images/1604070028966.PNG" alt="" loading="lazy"><br>
 Repo（LiteSpeed Repositories）相对简单，需要自己安装php、mysql和相关运行库， 可自由选择相应的版本，同时官方提供一键安装脚本 ols1clk 。我的服务器端运行的是CentOS8，经测试成功安装并顺利运行WordPress。</p>
 <h3 id="首先添加库">首先添加库</h3>
 <p><strong>CentOS 7</strong>:</p>
