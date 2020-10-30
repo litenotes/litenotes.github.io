@@ -106,8 +106,10 @@
 <h2 id="openlitespeed性能">Openlitespeed性能</h2>
 <p>一开始我是使用Nginx来运行Woredpress的，虽然理论上比Apache快很多，但是总体来说，还是很慢，互联网上一大堆提升WordPress速度的文章，也说明大家都想提升速度，但是nginx性能就在那里，只能另辟蹊径，看看官网的Benchmarks：<br>
 <img src="https://litenotes.github.io/post-images/1604069831311.png" alt="" loading="lazy"></p>
-<p>如果是Jommla，那就更厉害，几乎是压倒性的优势（<a href="https://litenotes.github.io/post-images/1604069867966.PNG">原文链接</a></p>
-<p>使用ModSecurity（WAF）防火墙后，Nginx和Apache几乎崩溃，但是OLS依然很快（<a href="https://litenotes.github.io/post-images/1604069912638.PNG">原文链接</a></p>
+<p>如果是Jommla，那就更厉害，几乎是压倒性的优势：<br>
+<img src="https://litenotes.github.io/post-images/1604070312274.PNG" alt="" loading="lazy"><br>
+使用ModSecurity（WAF）防火墙后，Nginx和Apache几乎崩溃，但是OLS依然很快：<br>
+<img src="https://litenotes.github.io/post-images/1604070321044.PNG" alt="" loading="lazy"></p>
 <h2 id="如何安装openlitespeed">如何安装Openlitespeed</h2>
 <p>WordPress插件库有一个litespeed插件，安装后无法启动全部功能，需要服务器端安装相应的软件，于是就试着安装openlitespeed。官网有四种安装方式：<br>
 <img src="https://litenotes.github.io/post-images/1604070028966.PNG" alt="" loading="lazy"><br>
